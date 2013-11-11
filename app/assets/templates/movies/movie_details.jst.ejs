@@ -1,0 +1,16 @@
+<form id="delete-movie-form">
+	<h2><%= title %></h2>
+	<img src="<%= img_url %>" alt="<%= title %>"/>
+	
+	<br/><br/>
+	<%= summary %>
+	<br/><br/>
+	
+	<p>
+		<% if ($('#user_id').attr('value') == user.id) { %>
+			<button type="submit" id="details-edit" class="btn btn-primary">Edit</button>
+			<button type="submit" id="details-delete" class="btn btn-danger">Delete</button>
+		<% } %>
+		<button type="submit" id="details-back" class="btn">Back</button>
+	</p>
+</form>

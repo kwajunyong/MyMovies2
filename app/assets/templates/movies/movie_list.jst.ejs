@@ -1,0 +1,28 @@
+<h1 style="padding:0px 10px;margin:0px 10px;">
+	Popular
+</h1>
+
+<div class="container">
+	<% _.each(movies, function(movie) { %>
+		<div style="width:250px;float:left;padding:10px;margin:10px;">
+			<% var title = movie.title %>
+			<h4><a href="#movie/<%= movie.id %>"><%= (title.length > 20) ? title.substring(0, 20) + "..." : title %></a></h4>
+			<a href="#movie/<%= movie.id %>"><img src="<%= movie.img_url %>" alt="<%= movie.title %>"/></a>
+			<p>Score: <%= Math.round(movie.avg_score) %>%</p>
+		</div>
+	<% }); %>
+</div>
+
+<h4 style="padding:0px 10px;margin:0px 10px;">
+<p>
+	<% if (page > 1) { %>
+		<a href="#movies/<%= page - 1 %>">&laquo;</a>
+	<% } %>
+	
+	<%= page %>
+	
+	<% if (next) { %>
+		<a href="#movies/<%= page + 1 %>">&raquo;</a>
+	<% } %>
+</p>
+</h4>

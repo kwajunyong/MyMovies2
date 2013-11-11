@@ -1,0 +1,15 @@
+<form id="edit-movie-form">
+	<legend>Edit Movie</legend>
+	<label for="title">Title</label>
+	<input id="title" name="movie[title]" type="text" value="<%= title %>">
+	<label for="summary">Summary</label>
+	<input id="summary" name="movie[summary]" type="text" value="<%= summary %>">
+	<label for="img">Image</label>
+	<input id="img" name="movie[img]" type="file" accept="image/*">
+	
+	<br/>
+	<br/>
+	
+	<button type="submit" id="edit-edit" class="btn btn-primary">Edit Movie</button>
+	<button type="submit" id="edit-cancel" class="btn">Cancel</button>
+</form>
