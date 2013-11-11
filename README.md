@@ -18,3 +18,6 @@ To run MyMovies2
        ```
        
 3. Go to http://localhost:3000/
+
+========================
+The testing of MyMovies2 is done using Google Chrome browser. Due to the different behavior of the various browsers, MyMovies2 will work perfectly in Google Chrome but not in Mozilla Firefox.
